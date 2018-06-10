@@ -39,7 +39,7 @@ Moving averages smooth a series and helps identify trends, and help identify tre
 Here, the 200-day moving average shows that the stock is trending downward over ina general view. 
 Also the crossing of moving average lines indicate changes in trend, which can be used as trading signals, or indications that a financial security is changing direction and a profitable trade might be made.
 
-
+![Return](https://github.com/XinyiLeo/StockHMM/blob/master/graphs/graph8.png)
 
 
 
