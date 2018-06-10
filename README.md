@@ -10,3 +10,16 @@ I used python3 to implemet codes and visualize data. I revised some codes in HMM
 Those are visualization of three close values: Apple Inc. (NASDAQ:AAPL), Microsoft (NASDAQ:MSFT) and Google (NASDAQ:GOOG), from 2016 January to 2018 June. 
 https://github.com/XinyiLeo/StockHMM/blob/master/graphs/graph2.png
 
+I extracted data from Morningstar Investment management company, because it has high compatibility with pandas in python. The current inputs are extracted from historical ﬁnancial time series data, which includes: 
+1. Daily Open: the price of the stock at the beginning of the trading day (it need not be the closing price of the previous trading day).
+2. Daily High: the highest price of the stock on that trading day.
+3. Daily Low: the lowest price of the stock on that trading day, and close the price of the stock at closing time.
+4. Adjusted close: the closing price of the stock that adjusts the price of the stock for corporate actions.
+
+A good way to visualize all data is by Candlestick Chart. In this chart. If the daily open value is lower than the close value, the bar is black (reported a gain). If the daily close value is higher than the open value, the bar is red (reported a loss). The wicks on the top and lower part of the bar means the high value and low value of a day.  
+https://github.com/XinyiLeo/StockHMM/blob/master/graphs/graph3.png
+
+
+
+
+
