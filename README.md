@@ -10,12 +10,3 @@ I used python3 to implemet codes and visualize data. I revised some codes in HMM
 Those are visualization of three close values: Apple Inc. (NASDAQ:AAPL), Microsoft (NASDAQ:MSFT) and Google (NASDAQ:GOOG), from 2016 January to 2018 June. 
 https://github.com/XinyiLeo/StockHMM/blob/master/graphs/graph2.png
 
-
-
-
-
-
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
