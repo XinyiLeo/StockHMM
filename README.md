@@ -20,10 +20,7 @@ A good way to visualize all data is by Candlestick Chart. In this chart. If the 
 ![Candle Stick](https://github.com/XinyiLeo/StockHMM/blob/master/graphs/graph3.png)
 
 In finance, we concerned about the relative change of an asset rather than its absolute price. That’s because when we trade, we concern more about the volatility of a stock price.
-```LaTeX
-\sigma
-```
-
+<a href="https://www.codecogs.com/eqnedit.php?latex=return_{t,0}&space;=&space;\dfrac{price_t}{price_0}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?return_{t,0}&space;=&space;\dfrac{price_t}{price_0}" title="return_{t,0} = \dfrac{price_t}{price_0}" /></a>
 
 
 
