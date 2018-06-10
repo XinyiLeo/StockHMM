@@ -6,6 +6,10 @@ I myself ﬁrmly believe that algorithms is the core backbone of trading strateg
 
 I used python3 to implemet codes and visualize data. I revised some codes in HMM. Those codes are for education purpose, but I revised them in my financial projects. My revised codes are here [My codes]. 
 
+My work process is similiar to this flow chart:
+
+![Flow chart](https://github.com/XinyiLeo/StockHMM/blob/master/graphs/graph12.png)
+
 ## Visualization for historical data
 Those are visualization of three close values: Apple Inc. (NASDAQ:AAPL), Microsoft (NASDAQ:MSFT) and Google (NASDAQ:GOOG), from 2016 January to 2018 June. 
 ![Apple Close Value](https://github.com/XinyiLeo/StockHMM/blob/master/graphs/graph4.png)
@@ -27,19 +31,23 @@ In finance, we concerned about the relative change of an asset rather than its a
 
 Log return is a much more useful plot. We can now see how profitable each stock was since the beginning of the period. Furthermore, we see that these stocks are highly correlated; they generally move in the same direction, a fact that was difficult to see in the other charts. 
 
-![Return](https://github.com/XinyiLeo/StockHMM/blob/master/graphs/graph6.png)
+![Log Return](https://github.com/XinyiLeo/StockHMM/blob/master/graphs/graph6.png)
 
 Another possible feature for stock estimation is Moving Average,  
 <a href="https://www.codecogs.com/eqnedit.php?latex=MA_t^q&space;=&space;\dfrac{1}{q}&space;\sum\limits_{i=0}^{q-1}&space;x_{t-i}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?MA_t^q&space;=&space;\dfrac{1}{q}&space;\sum\limits_{i=0}^{q-1}&space;x_{t-i}" title="MA_t^q = \dfrac{1}{q} \sum\limits_{i=0}^{q-1} x_{t-i}" /></a>
 
 Moving averages smooth a series and helps identify trends, and help identify trends from “noise”. 
 
-![Return](https://github.com/XinyiLeo/StockHMM/blob/master/graphs/graph7.png)
+![MA](https://github.com/XinyiLeo/StockHMM/blob/master/graphs/graph7.png)
 
 Here, the 200-day moving average shows that the stock is trending downward over ina general view. 
 Also the crossing of moving average lines indicate changes in trend, which can be used as trading signals, or indications that a financial security is changing direction and a profitable trade might be made.
 
-![Return](https://github.com/XinyiLeo/StockHMM/blob/master/graphs/graph8.png)
+![MA for all](https://github.com/XinyiLeo/StockHMM/blob/master/graphs/graph8.png)
+
+
+## Weka baseline estimation 
+
 
 
 
