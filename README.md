@@ -23,8 +23,21 @@ In finance, we concerned about the relative change of an asset rather than its a
 
 <img src="https://latex.codecogs.com/gif.latex?return_{t,0}&space;=&space;\dfrac{price_t}{price_0}" title="return_{t,0} = \dfrac{price_t}{price_0}" />
 
+![Return](https://github.com/XinyiLeo/StockHMM/blob/master/graphs/graph5.png)
 
+Log return is a much more useful plot. We can now see how profitable each stock was since the beginning of the period. Furthermore, we see that these stocks are highly correlated; they generally move in the same direction, a fact that was difficult to see in the other charts. 
 
+![Return](https://github.com/XinyiLeo/StockHMM/blob/master/graphs/graph6.png)
+
+Another possible feature for stock estimation is Moving Average,  
+<a href="https://www.codecogs.com/eqnedit.php?latex=MA_t^q&space;=&space;\dfrac{1}{q}&space;\sum\limits_{i=0}^{q-1}&space;x_{t-i}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?MA_t^q&space;=&space;\dfrac{1}{q}&space;\sum\limits_{i=0}^{q-1}&space;x_{t-i}" title="MA_t^q = \dfrac{1}{q} \sum\limits_{i=0}^{q-1} x_{t-i}" /></a>
+
+Moving averages smooth a series and helps identify trends, and help identify trends from “noise”. 
+
+![Return](https://github.com/XinyiLeo/StockHMM/blob/master/graphs/graph7.png)
+
+Here, the 200-day moving average shows that the stock is trending downward over ina general view. 
+Also the crossing of moving average lines indicate changes in trend, which can be used as trading signals, or indications that a financial security is changing direction and a profitable trade might be made.
 
 
 
