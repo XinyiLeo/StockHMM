@@ -164,6 +164,6 @@ var =  [[1.96483621 0.90036972]
 And the graph:
 ![Baum-Welch](graphs/graph40.png)
 
-
+ 
 
 
