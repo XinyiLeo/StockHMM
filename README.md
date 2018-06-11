@@ -93,6 +93,9 @@ For those who have problem installing hmmlearn, I provide the wheel executable h
 The reason of using HMM is that based on observations, we predict that the hidden states are some Gaussian Distrbutions with different parameters. We don't know the exact number of hidden states, so I assume 4 states (simplified model).
 
 ### Model Description
+My code for this part is here: [HMM](https://github.com/XinyiLeo/StockHMM/blob/master/hmmestimate.py)
+
+
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\lambda&space;=&space;(\pi,&space;A,&space;B)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\lambda&space;=&space;(\pi,&space;A,&space;B)" title="\lambda = (\pi, A, B)" /></a>
 where A is the transition matrix, B is the matrix of observation, where
