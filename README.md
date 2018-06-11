@@ -1,7 +1,10 @@
 ![Headder](https://www.digitaledge.org/wp-content/uploads/2018/02/How-Can-You-Master-Algorithmic-Trading.jpeg)
 **Xinyi Wu**
+
 **Email: xinyiwu2019@u.northwestern.edu**
+
 **Course: [EECS349] Machine Learning**
+
 **College: Northwestern University**
 
 ## Introduction
