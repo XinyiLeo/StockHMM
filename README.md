@@ -105,40 +105,38 @@ where A is the transition matrix, B is the matrix of observation, where
 * N() is multi-dimensional Gaussian Distribution
 In my simulation, I choose observation to be the log return of the stock. I set hidden states to 4. And I acquire data from Morningstar Company.I posted a code for training, which is partly referred by the tutorial of hmmlearn package.
 
-'''
-import datetime
+    import datetime
+    import numpy as np
+    from matplotlib import cm, pyplot as plt
+    from matplotlib.dates import YearLocator, MonthLocator
+    from hmmlearn.hmm import GaussianHMM
+    from sklearn.preprocessing import scale
+    import pandas_datareader.data as web
 
-import numpy as np
-from matplotlib import cm, pyplot as plt
-from matplotlib.dates import YearLocator, MonthLocator
-from hmmlearn.hmm import GaussianHMM
-from sklearn.preprocessing import scale
-import pandas_datareader.data as web
+    start = datetime.datetime(2016, 1, 1)
+    end = datetime.date.today()
+    apple = web.DataReader("AAPL", "morningstar", start, end)
 
-start = datetime.datetime(2016, 1, 1)
-end = datetime.date.today()
-apple = web.DataReader("AAPL", "morningstar", start, end)
+    dates = np.array(apple["Close"].index.levels[1])
+    close_v = np.array(apple["Close"].values)
+    volume = np.array(apple["Volume"].values)[1:]
 
-dates = np.array(apple["Close"].index.levels[1])
-close_v = np.array(apple["Close"].values)
-volume = np.array(apple["Volume"].values)[1:]
+    # Get the variation of the price
+    diff = np.diff(close_v)
+    dates = dates[1:]
+    close_v = close_v[1:]
 
-# Get the variation of the price
-diff = np.diff(close_v)
-dates = dates[1:]
-close_v = close_v[1:]
+    # Scale: Normalize
+    # Input the stock return and
+    X = np.column_stack([scale(diff), scale(volume)])
 
-# Scale: Normalize
-# Input the stock return and
-X = np.column_stack([scale(diff), scale(volume)])
+    # Train Gaussian Model, Assume 4 hidden states
+    model = GaussianHMM(n_components=4, covariance_type="full", n_iter=20)
+    model.fit(X)
 
-# Train Gaussian Model, Assume 4 hidden states
-model = GaussianHMM(n_components=4, covariance_type="full", n_iter=20)
-model.fit(X)
+    # Prediction the hidden layers
+    hidden_states = model.predict(X)
 
-# Prediction the hidden layers
-hidden_states = model.predict(X)
-'''
 
 
 
