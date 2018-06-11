@@ -55,7 +55,11 @@ First I installed package Time Series Forecasting. The Regression Techniques I u
 * MLP can also differentiate data which cannot be separated linearly.
 * SMOreg: Support Vector Regression Method, use sequential minimal optimization algorithm.
 
+Data Collection: Used python to generate two csv files: 
+Weka automaticlaly generate statistics (take Google (NASDAQ: GOOG) close value from 2016 Jan. 1st, to 2018 May 25th as an example):
 
+![GOOGstatbar](https://github.com/XinyiLeo/StockHMM/blob/master/graphs/graph18.png)
+![GOOGstat](https://github.com/XinyiLeo/StockHMM/blob/master/graphs/graph19.png)
 
 
 
