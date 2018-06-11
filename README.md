@@ -31,7 +31,7 @@ In finance, we concerned about the relative change of an asset rather than its a
 ![Return](/graphs/graph5.png)
 
 Log return is a much more useful plot. We can now see how profitable each stock was since the beginning of the period. Furthermore, we see that these stocks are highly correlated; they generally move in the same direction, a fact that was difficult to see in the other charts. 
-
+ 
 ![Log Return](graphs/graph6.png)
 
 Another possible feature for stock estimation is Moving Average,  
