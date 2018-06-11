@@ -94,10 +94,7 @@ The reason of using HMM is that based on observations, we predict that the hidde
 
 ### Model Description
 
-<head>
-<script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
-</head>
-
+$\frac{x+y}{y+z}$
  
 
  
