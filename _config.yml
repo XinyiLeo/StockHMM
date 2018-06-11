@@ -1,4 +1,4 @@
 theme: jekyll-theme-dinky
 title: Stock Index Estimation with Hidden Markov Model
-description: Author: Xinyi Wu Email: xinyiwu2019@u.northwestern.edu Course: Machine Learning(EECS349) College: Northwestern University
+description: Author: Xinyi Wu Course: Machine Learning(EECS349) College: Northwestern University
 baseurl: "/StockHMM"
