@@ -10,7 +10,7 @@ I used python3 to implemet codes and visualize data. I revised some codes in HMM
 
 My work process is similiar to this flow chart:
 
-![Flow chart](https://github.com/XinyiLeo/StockHMM/blob/master/graphs/graph12.png)
+![Flow chart](https://drive.google.com/drive/folders/16BZek2XZfbRA_Le0s_M71KbizlHRLRDf)
 
 ## Visualization for historical data
 Those are visualization of three close values: Apple Inc. (NASDAQ:AAPL), Microsoft (NASDAQ:MSFT) and Google (NASDAQ:GOOG), from 2016 January to 2018 June. 
