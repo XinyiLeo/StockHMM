@@ -88,7 +88,7 @@ I used those methods above to forecast the result of GOOG stock index 10 days af
 
 
 
-
+ 
 
 
 
