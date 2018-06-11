@@ -65,7 +65,9 @@ I used those methods above to forecast the result of GOOG stock index 10 days af
 1. Simple Gaussian Process Predictor (not fit)
 ![Gaussian](https://github.com/XinyiLeo/StockHMM/blob/master/graphs/graph31.png)
 
-
+2. Linear Regression (Intuitive Method)
+![LR](https://github.com/XinyiLeo/StockHMM/blob/master/graphs/graph32.png)
+![LR](https://github.com/XinyiLeo/StockHMM/blob/master/graphs/graph33.png)
 
 
 
