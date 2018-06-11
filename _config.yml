@@ -1,4 +1,4 @@
-theme: jekyll-theme-dinky
+theme: jekyll-theme-tactile
 title: This is Xinyi's project in Mahcine Learning Course.
 description: I applied Hidden Markov Method to estimate some stock indexes. Note that this model is for learning, but far from mature to apply to real algorithmic trading. 
 baseurl: "/StockHMM"
