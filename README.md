@@ -162,6 +162,7 @@ var =  [[1.96483621 0.90036972]
  [0.90036972 1.70227106]]
 ```
 And the graph:
+
 ![Baum-Welch](graphs/graph40.png)
 
 Baum-Welch is mased on Estimation-Maximum Procesure. First use EM to estimate the model, then collect expected number of trasitions from a state_i, and make statistics of expected number of transitions from S_i to S_j.
@@ -169,11 +170,13 @@ Baum-Welch is mased on Estimation-Maximum Procesure. First use EM to estimate th
 The M step is estimating the posterior of transition matrix, new observations and probability matrixes.
 I haven't give real predictions for Hidden Markov Model, but based on the baseline method, the HMM looks well. I posted a graph that use similiar methods with me:
 
+![Baum-Welch](graphs/graph41.png)
+
+Ref: Gupta, Aditya, and Bhuwan Dhingra. "Stock market prediction using hidden markov models." Engineering and Systems (SCES), 2012 Students Conference on. IEEE, 2012.
 
  
 ## Improvement
 Can probabily implement HMM on my own in the future(Implment Forward algorithm, backward algorithm, GetGamma, GetXi, Viterbi). 
-
  
 Besides HMM, other famous machine learning methods includes Artificial Neural Netowrks(ANN), Fuzzy Logic(FL), and Support Vector Machines(SVM). Can learn them in the future. 
 
