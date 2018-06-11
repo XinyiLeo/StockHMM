@@ -190,5 +190,5 @@ Ref: Gupta, Aditya, and Bhuwan Dhingra. "Stock market prediction using hidden ma
 Can probabily implement HMM on my own in the future(Implment Forward algorithm, backward algorithm, GetGamma, GetXi, Viterbi). 
  
 Besides HMM, other famous machine learning methods includes Artificial Neural Netowrks(ANN), Fuzzy Logic(FL), and Support Vector Machines(SVM). Can learn them in the future. 
-
+ 
  
