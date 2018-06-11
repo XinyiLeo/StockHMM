@@ -93,8 +93,9 @@ For those who have problem installing hmmlearn, I provide the wheel executable h
 The reason of using HMM is that based on observations, we predict that the hidden states are some Gaussian Distrbutions with different parameters. We don't know the exact number of hidden states, so I assume 4 states (simplified model).
 
 ### Model Description
-
-$\frac{x+y}{y+z}$
+<a href="https://www.codecogs.com/eqnedit.php?latex=\lambda&space;=&space;(\pi,&space;A,&space;B)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\lambda&space;=&space;(\pi,&space;A,&space;B)" title="\lambda = (\pi, A, B)" /></a>
+where A is the transition matrix, B is the matrix of observation, where
+<a href="https://www.codecogs.com/eqnedit.php?latex=b_j(Q_t)&space;=&space;\sum\limits_{m=1}^M&space;c_{jm}N(O_t,&space;\mu_{jm},&space;\Sigma_{jm})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?b_j(Q_t)&space;=&space;\sum\limits_{m=1}^M&space;c_{jm}N(O_t,&space;\mu_{jm},&space;\Sigma_{jm})" title="b_j(Q_t) = \sum\limits_{m=1}^M c_{jm}N(O_t, \mu_{jm}, \Sigma_{jm})" /></a>
  
 
  
