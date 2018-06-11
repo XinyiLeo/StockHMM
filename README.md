@@ -104,7 +104,7 @@ where A is the transition matrix, B is the matrix of observation, where
 * \mu _jm is the mean vector of mth component in jth state
 * N() is multi-dimensional Gaussian Distribution
 In my simulation, I choose observation to be the log return of the stock. I set hidden states to 4. And I acquire data from Morningstar Company.I posted a code for training, which is partly referred by the tutorial of hmmlearn package.
-
+```
     import datetime
     import numpy as np
     from matplotlib import cm, pyplot as plt
@@ -136,8 +136,7 @@ In my simulation, I choose observation to be the log return of the stock. I set 
 
     # Prediction the hidden layers
     hidden_states = model.predict(X)
-
-
+```
 
 
 
