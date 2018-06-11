@@ -49,6 +49,11 @@ Also the crossing of moving average lines indicate changes in trend, which can b
 
 
 ## Weka baseline estimation 
+First I installed package Time Series Forecasting. The Regression Techniques I used:
+* Linear: conditional mean of y is a linear affine function of x.
+* Multilayer Perception: Feed forward artificial neural network.
+* MLP can also differentiate data which cannot be separated linearly.
+* SMOreg: Support Vector Regression Method, use sequential minimal optimization algorithm.
 
 
 
