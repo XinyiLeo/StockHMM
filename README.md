@@ -93,12 +93,52 @@ For those who have problem installing hmmlearn, I provide the wheel executable h
 The reason of using HMM is that based on observations, we predict that the hidden states are some Gaussian Distrbutions with different parameters. We don't know the exact number of hidden states, so I assume 4 states (simplified model).
 
 ### Model Description
+
 <a href="https://www.codecogs.com/eqnedit.php?latex=\lambda&space;=&space;(\pi,&space;A,&space;B)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\lambda&space;=&space;(\pi,&space;A,&space;B)" title="\lambda = (\pi, A, B)" /></a>
 where A is the transition matrix, B is the matrix of observation, where
+
 <a href="https://www.codecogs.com/eqnedit.php?latex=b_j(Q_t)&space;=&space;\sum\limits_{m=1}^M&space;c_{jm}N(O_t,&space;\mu_{jm},&space;\Sigma_{jm})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?b_j(Q_t)&space;=&space;\sum\limits_{m=1}^M&space;c_{jm}N(O_t,&space;\mu_{jm},&space;\Sigma_{jm})" title="b_j(Q_t) = \sum\limits_{m=1}^M c_{jm}N(O_t, \mu_{jm}, \Sigma_{jm})" /></a>
  
+* M is number of Gaussian Mixture Components
+* c_jm is the weight of m mixture component in state j
+* \mu _jm is the mean vector of mth component in jth state
+* N() is multi-dimensional Gaussian Distribution
+In my simulation, I choose observation to be the log return of the stock. I set hidden states to 4. And I acquire data from Morningstar Company.I posted a code for training, which is partly referred by the tutorial of hmmlearn package.
 
- 
+'''
+import datetime
+
+import numpy as np
+from matplotlib import cm, pyplot as plt
+from matplotlib.dates import YearLocator, MonthLocator
+from hmmlearn.hmm import GaussianHMM
+from sklearn.preprocessing import scale
+import pandas_datareader.data as web
+
+start = datetime.datetime(2016, 1, 1)
+end = datetime.date.today()
+apple = web.DataReader("AAPL", "morningstar", start, end)
+
+dates = np.array(apple["Close"].index.levels[1])
+close_v = np.array(apple["Close"].values)
+volume = np.array(apple["Volume"].values)[1:]
+
+# Get the variation of the price
+diff = np.diff(close_v)
+dates = dates[1:]
+close_v = close_v[1:]
+
+# Scale: Normalize
+# Input the stock return and
+X = np.column_stack([scale(diff), scale(volume)])
+
+# Train Gaussian Model, Assume 4 hidden states
+model = GaussianHMM(n_components=4, covariance_type="full", n_iter=20)
+model.fit(X)
+
+# Prediction the hidden layers
+hidden_states = model.predict(X)
+'''
 
 
 
