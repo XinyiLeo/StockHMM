@@ -137,7 +137,31 @@ In my simulation, I choose observation to be the log return of the stock. I set 
     # Prediction the hidden layers
     hidden_states = model.predict(X)
 ```
-
+The Baum-Welch Training Result is printed below:
+```
+Transition matrix:  [[6.78898397e-01 2.20049840e-01 7.93357332e-02 2.17160306e-02]
+ [2.91800841e-01 6.72692500e-01 3.35863569e-02 1.92030195e-03]
+ [1.96634489e-01 6.95749706e-05 6.26201366e-01 1.77094571e-01]
+ [3.59640268e-01 2.58710441e-06 2.63557237e-01 3.76799908e-01]]
+Means and vars of each hidden state
+0th hidden state
+mean =  [ 0.11095387 -0.13041157]
+var =  [[ 0.62000407 -0.00778336]
+ [-0.00778336  0.14232008]]
+1th hidden state
+mean =  [-0.06066027 -0.74767573]
+var =  [[ 0.09386268 -0.00029546]
+ [-0.00029546  0.23985255]]
+2th hidden state
+mean =  [-0.80832043  1.13496253]
+var =  [[ 1.48695373 -0.57097857]
+ [-0.57097857  1.30153418]]
+3th hidden state
+mean =  [1.64476032 1.34418623]
+var =  [[1.96483621 0.90036972]
+ [0.90036972 1.70227106]]
+```
+And the graph:
 
 
 
