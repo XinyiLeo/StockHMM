@@ -1,3 +1,9 @@
+<html>
+<head>
+<script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+</head>
+<body>
+ 
 ![Headder](https://www.digitaledge.org/wp-content/uploads/2018/02/How-Can-You-Master-Algorithmic-Trading.jpeg)
 ## Introduction
 I finally finish one of my dream this year to play with some codes in stock indexes estimation. In January to Martch I made some literature research for a wide-used hidden markov - stochastic volatility models, see [Literature Research](https://github.com/XinyiLeo/Samples/blob/master/Xinyi%20Wu_433%20final%20report.pdf). Later in Machine learning course, I used software like Weka to give some baseline predictions and finally understood and revised some codes in HMM stock prediction. This is my first ML project in finance. Regard it as prototype, because it is far from mature to put in to reality algo trading. 
@@ -47,7 +53,7 @@ Also the crossing of moving average lines indicate changes in trend, which can b
 ![MA for all](graphs/graph8.png)
 
 
-## Weka baseline estimation 
+## Weka Baseline Estimation 
 First I installed package Time Series Forecasting. The Regression Techniques I used:
 * Linear: conditional mean of y is a linear affine function of x.
 * Multilayer Perception: Feed forward artificial neural network.
@@ -85,6 +91,14 @@ I used those methods above to forecast the result of GOOG stock index 10 days af
 ![LR](graphs/graph38.png)
 ![LR](graphs/graph39.png)
 
+Except Gaussian method, all the other perform tolerable results.
+
+## Hmmlearn Package
+For those who have problem installing hmmlearn, I provide the wheel executable here  [HMMwheel](https://www.lfd.uci.edu/~gohlke/pythonlibs/). It does not appears on official website and it takes a while to find this.
+
+The reason of using HMM is that based on observations, we predict that the hidden states are some Gaussian Distrbutions with different parameters. We don't know the exact number of hidden states, so I assume 4 states (simplified model).
+
+### Model Description
 
 
  
