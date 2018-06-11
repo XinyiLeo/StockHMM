@@ -66,8 +66,25 @@ I used those methods above to forecast the result of GOOG stock index 10 days af
 ![Gaussian](https://github.com/XinyiLeo/StockHMM/blob/master/graphs/graph31.png)
 
 2. Linear Regression (Intuitive Method)
+
 ![LR](https://github.com/XinyiLeo/StockHMM/blob/master/graphs/graph32.png)
 ![LR](https://github.com/XinyiLeo/StockHMM/blob/master/graphs/graph33.png)
+
+
+3. Multilayer Perception
+
+![LR](https://github.com/XinyiLeo/StockHMM/blob/master/graphs/graph34.png)
+![LR](https://github.com/XinyiLeo/StockHMM/blob/master/graphs/graph35.png)
+
+4. SMOreg
+
+![LR](https://github.com/XinyiLeo/StockHMM/blob/master/graphs/graph36.png)
+
+5. HoltWinters (I don't what that is, but fancy enough to try):
+
+![LR](https://github.com/XinyiLeo/StockHMM/blob/master/graphs/graph37.png)
+![LR](https://github.com/XinyiLeo/StockHMM/blob/master/graphs/graph38.png)
+![LR](https://github.com/XinyiLeo/StockHMM/blob/master/graphs/graph39.png)
 
 
 
