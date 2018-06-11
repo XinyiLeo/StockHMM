@@ -162,6 +162,7 @@ var =  [[1.96483621 0.90036972]
  [0.90036972 1.70227106]]
 ```
 And the graph:
+![Baum-Welch](graphs/graph40.png)
 
 
 
