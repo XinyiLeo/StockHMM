@@ -23,7 +23,7 @@ I extracted data from Morningstar Investment management company, because it has 
 4. Adjusted close: the closing price of the stock that adjusts the price of the stock for corporate actions.
 
 A good way to visualize all data is by Candlestick Chart. In this chart. If the daily open value is lower than the close value, the bar is black (reported a gain). If the daily close value is higher than the open value, the bar is red (reported a loss). The wicks on the top and lower part of the bar means the high value and low value of a day.  
-![Candle Stick](graphs/graph3.png)
+![Candle Stick](graphs/graph3.png) 
  
 In finance, we concerned about the relative change of an asset rather than its absolute price. That’s because when we trade, we concern more about the volatility of a stock price.
 
