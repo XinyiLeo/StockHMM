@@ -1,34 +1,66 @@
-# ref:　https://www.cnblogs.com/fangbei/p/8409110.html
+import datetime
+
 import numpy as np
+from matplotlib import cm, pyplot as plt
+from matplotlib.dates import YearLocator, MonthLocator
+from hmmlearn.hmm import GaussianHMM
+from sklearn.preprocessing import scale
+import pandas_datareader.data as web
+
+start = datetime.datetime(2016, 1, 1)
+end = datetime.date.today()
+apple = web.DataReader("AAPL", "morningstar", start, end)
+
+dates = np.array(apple["Close"].index.levels[1])
+close_v = np.array(apple["Close"].values)
+volume = np.array(apple["Volume"].values)[1:]
+
+# Get the variation of the price
+diff = np.diff(close_v)
+dates = dates[1:]
+close_v = close_v[1:]
+
+# Scale: Normalize
+# Input the stock return and
+X = np.column_stack([scale(diff), scale(volume)])
+
+# Train Gaussian Model, Assume 4 hidden states
+model = GaussianHMM(n_components=4, covariance_type="full", n_iter=20)
+model.fit(X)
+
+# Prediction the hidden layers
+hidden_states = model.predict(X)
+
+# Print the parameters
+print("Transition matrix: ", model.transmat_)
+print("Means and vars of each hidden state")
+for i in range(4):
+    print("{0}th hidden state".format(i))
+    print("mean = ", model.means_[i])
+    print("var = ", model.covars_[i])
+print()
+
+fig, axs = plt.subplots(4, sharex=True, sharey=True)
+colours = cm.rainbow(np.linspace(0, 1, 4))
+
+one_layer = []
+two_layer = []
+three_layer = []
+fourth_layer = []
+
+for i, (ax, colour) in enumerate(zip(axs, colours)):
+    # Use fancy indexing to plot data in each state.
+    mask = hidden_states == i
+    ax.plot_date(dates[mask], close_v[mask], ".-", c=colour)
+    ax.set_title("{0}th hidden state".format(i))
+
+    # Format the ticks.
+    ax.xaxis.set_major_locator(YearLocator())
+    ax.xaxis.set_minor_locator(MonthLocator())
+
+    ax.grid(True)
+
+plt.show()
 
 
-def ForwardAlgo(A, B, Pi, O):
-    N = A.shape[0]
-    M = A.shape[1]
-    H = O.shape[1]
 
-    sum_alpha_1 = np.zeros((M, N))
-    alpha = np.zeros((N, H))
-    r = np.zeros((1, N))
-    alpha_1 = np.multiply(Pi[0, :], B[:, O[0, 0] - 1])
-
-    alpha[:, 0] = np.array(alpha_1).reshape(1, N)
-
-    for h in range(1, H):
-        for i in range(N):
-            for j in range(M):
-                sum_alpha_1[i, j] = alpha[j, h - 1] * A[j, i]
-            r = sum_alpha_1.sum(1).reshape(1, N)
-            alpha[i, h] = r[0, i] * B[i, O[0, h] - 1]
-    p = alpha.sum(0).reshape(1, H)
-    P = p[0, H - 1]
-    print("alpha matrix: \n %r" % alpha)
-    print("Observation Probability: \n %r" % P)
-    return alpha, P
-
-
-A = np.array([[.5,.2,.3],[.3,.5,.2],[.2,.3,.5]])
-B = np.array([[.5,.5],[.4,.6],[.7,.3]])
-Pi = np.array([[.2,.4,.4]])
-O = np.array([[1,2,1]])
-ForwardAlgo(A, B, Pi, O)
