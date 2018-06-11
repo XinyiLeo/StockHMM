@@ -7,7 +7,7 @@ I myself ﬁrmly believe that algorithms is the core backbone of trading strateg
 
 I used python3 to implemet codes and visualize data. I revised some codes in HMM. Those codes are for education purpose, but I revised them in my financial projects. My revised codes are here [My codes](https://github.com/XinyiLeo/StockHMM). 
 
-My work process is similiar to this flow chart:
+My work process is similiar to this flow chart. First, I analysed some significant feaures in stock estimation. For example, log return and moving averages. Second, I used some popular regression methods to make simple estimations and serve the results as baseline method. It's noted that the baseline method performs similarly except the basic Gaussian Method. Last I followed the tutorial of GaussianHMM package to simulate the Baum-Welch training, and calculate the hidden layes of the stock indexes. I simplified the validation process. Instead of using MAP(Maximum a posteriori estimation), I simply compared the result of HMM with those baseline results from Weka. 
 
 ![Flow chart](graphs/graph12.png)
 
