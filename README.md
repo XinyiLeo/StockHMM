@@ -61,6 +61,10 @@ Weka automaticlaly generate statistics (take Google (NASDAQ: GOOG) close value f
 ![GOOGstatbar](https://github.com/XinyiLeo/StockHMM/blob/master/graphs/graph18.png)
 ![GOOGstat](https://github.com/XinyiLeo/StockHMM/blob/master/graphs/graph19.png)
 
+I used those methods above to forecast the result of GOOG stock index 10 days after: 
+1. Simple Gaussian Process Predictor (not fit)
+![Gaussian](https://github.com/XinyiLeo/StockHMM/blob/master/graphs/graph31.png)
+
 
 
 
